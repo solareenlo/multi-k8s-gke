@@ -9,6 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
+          <h1>Fib Calculator version Kubernetes!</h1>
           <Link to="/">ホーム</Link>
           <Link to="/otherpage">その他</Link>
         </header>

@@ -1,0 +1,11 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: ClusterIssur
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: 'solareenlo@gmail.com'
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    http01: {}

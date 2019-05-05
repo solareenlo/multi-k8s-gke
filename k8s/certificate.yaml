@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: the-tangle-jp
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: thetangle.jp
+  dnsName:
+    - thetangle.jp
+    - www.thetangle.jp
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - thetangle.jp
+          - www.thetangle.jp

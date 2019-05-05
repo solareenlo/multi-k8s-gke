@@ -11,6 +11,6 @@ docker push solareenlo/multi-server:$SHA
 docker push solareenlo/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image solareenlo/server-deployment server=solareenlo/multi-server:$SHA
-kubectl set image solareenlo/client-deployment client=solareenlo/multi-client:$SHA
-kubectl set image solareenlo/worker-deployment worker=solareenlo/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=solareenlo/multi-server:$SHA
+kubectl set image deployments/client-deployment client=solareenlo/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=solareenlo/multi-worker:$SHA
